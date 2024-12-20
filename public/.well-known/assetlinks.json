@@ -1,0 +1,14 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "in.messant",
+            "sha256_cert_fingerprints": [
+                "5A:9B:9E:A1:55:4A:0C:00:66:93:3E:7A:25:92:54:F0:4A:3A:BB:0A:67:DF:E1:EA:4E:EC:EC:DA:81:47:03:3C"
+            ]
+        }
+    }
+]
