@@ -1,145 +1,125 @@
+// routes/index.tsx
 import type { MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 import Feature from "~/components/Feature";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Messant - Secure Messaging App Made in India" },
-    { name: "description", content: "Messant - Made in India messaging app with end-to-end encryption, voice calling, and real-time messaging. Stay connected securely and privately." },
-    { name: "keywords", content: "Messant, messaging app, India, end-to-end encryption, voice calling, real-time messaging, secure chat app" },
-    { name: "author", content: "Messant Technologies" },
-
-    // Open Graph (OG) Tags for Social Media
-    { property: "og:title", content: "Messant - Secure Messaging App Made in India" },
-    { property: "og:description", content: "Messant is a Made-in-India messaging app offering end-to-end encryption, secure voice calling, and real-time messaging. Stay connected, privately." },
-    { property: "og:image", content: "https://www.messant.in/images/brand-logo.png" },
-    { property: "og:url", content: "https://www.messant.in" },
+    { title: "MESEZ.ME - Private Messaging Reinvented" },
+    { name: "description", content: "MESEZ.ME offers modern, encrypted, and anonymous messaging. No ads. No tracking. Just pure privacy." },
+    { name: "keywords", content: "MESEZ, secure messaging, encrypted chat, private communication, India, WhatsApp alternative, Signal alternative" },
+    { name: "author", content: "MESEZ Technologies" },
+    { property: "og:title", content: "MESEZ.ME - Private Messaging Reinvented" },
+    { property: "og:description", content: "Fast. Secure. Anonymous. The next-gen messaging app made in India, for everyone." },
+    { property: "og:image", content: "https://www.mesez.me/images/brand-logo.png" },
+    { property: "og:url", content: "https://www.mesez.me" },
     { property: "og:type", content: "website" },
-
-    // Twitter Meta Tags
     { name: "twitter:card", content: "summary_large_image" },
-    { name: "twitter:title", content: "Messant - Secure Messaging App Made in India" },
-    { name: "twitter:description", content: "End-to-end encrypted messaging app with voice calling and real-time chat, made in India. Experience secure and private communication with Messant." },
-    { name: "twitter:image", content: "https://www.messant.in/images/brand-logo.png" },
-    { name: "twitter:site", content: "@MessantApp" },
-    { name: "twitter:creator", content: "@MessantApp" }
+    { name: "twitter:title", content: "MESEZ.ME - Private Messaging Reinvented" },
+    { name: "twitter:description", content: "No metadata. No ads. No nonsense. Just private conversations on your terms." },
+    { name: "twitter:image", content: "https://www.mesez.me/images/brand-logo.png" },
+    { name: "twitter:site", content: "@MesezApp" },
+    { name: "twitter:creator", content: "@MesezApp" }
   ];
 };
 
-
-
-const features: { title: string, image: string, description: string }[] = [
+const features = [
   {
     title: "End-to-End Encryption",
-    description: "Your messages stay private and secure, accessible only to you and the recipient.",
+    description: "Built on the Signal Protocol. No one can read your messages — not even us.",
     image: "/images/enc.png"
   },
   {
-    title: "Real-Time Messaging",
-    description: "Experience lightning-fast messaging with instant delivery and read receipts.",
+    title: "Instant Messaging",
+    description: "Lightning-fast delivery. Real-time typing indicators. Message receipts.",
     image: "/images/message.png"
   },
   {
-    title: "Crystal-Clear Voice Calls",
-    description: "Connect with friends and family through high-quality, encrypted voice calls.",
+    title: "Private Voice Calls",
+    description: "Crystal-clear encrypted audio with no call logs.",
     image: "/images/call.png"
   },
   {
-    title: "Simple, Easy, and Secure",
-    description: "Designed for everyone, Messant offers a clean interface that's easy to use and ensures your privacy.",
-    image: "/images/easy.png"
-  },
-  {
-    title: "Username-Based Accounts",
-    description: "No phone number or email required. Simply create a username to get started.",
+    title: "No Phone, No Email",
+    description: "All you need is a username. Nothing else. No data collection.",
     image: "/images/username.png"
   },
   {
-    title: "Message Deletion",
-    description: "Delete your messages anytime, and they will be removed for everyone.",
+    title: "Delete for Everyone",
+    description: "Take control of your messages — delete them from both sides at any time.",
     image: "/images/delete.png"
   },
   {
     title: "Screenshot Protection",
-    description: "Screenshots of messages and media are blocked to ensure complete privacy.",
+    description: "Prevent screenshots to protect sensitive chats and media.",
     image: "/images/screenshot.png"
   },
   {
-    title: "Media Sharing Security",
-    description: "Shared media files can NOT be downloaded or shared outside the app, ensuring your content stays private.",
+    title: "Secure Media Sharing",
+    description: "Block downloads and reshares to ensure your media stays private.",
     image: "/images/media.png"
+  },
+  {
+    title: "Minimalist Design",
+    description: "Clean, distraction-free UI. Designed for focus and clarity.",
+    image: "/images/easy.png"
   }
 ];
-
 
 export default function Index() {
   return (
     <>
-      <div className="bg-[#00D188] min-h-screen flex items-center justify-center p-5">
-        <div className="grid lg:grid-cols-2 gap-8 items-center max-w-6xl">
-          {/* Left Content */}
-          <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Messant - Secure Messaging Made in India</h1>
-
-            <p className="py-4 text-lg">Communicate privately with end-to-end encryption, crystal-clear voice calls, and real-time messaging. Proudly developed in India, for the world.</p>
-
-            <Link className="btn bg-white text-black px-6 text-lg" to={"https://play.google.com/store/apps/details?id=in.messant&hl=en_IN"}>
-              Download
-            </Link>
+      <main>
+        <section className="bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#334155] min-h-screen flex items-center justify-center px-6 text-white">
+          <div className="max-w-6xl text-center space-y-8">
+            <h1 className="text-5xl sm:text-6xl font-extrabold leading-tight">Messaging<br className="hidden sm:block" /> Rebuilt for Privacy</h1>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">MESEZ.ME is a radical take on modern communication. Fast. Private. Decentralized at heart. Made in India. For everyone.</p>
+            <a href="#download" className="inline-block bg-white text-black text-lg px-6 py-3 font-bold rounded-full shadow-md hover:scale-105 transition-transform">Download Now</a>
           </div>
+        </section>
 
-          {/* Right Images */}
-          <div className="flex justify-center relative">
-            <img
-              src="/images/phone1.png"
-              alt="Phone 1"
-              className="w-52 md:w-72 lg:w-80 drop-shadow-2xl"
-            />
+        <section id="features" className="bg-white py-24 px-6">
+          <div className="max-w-7xl mx-auto text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900">Everything You Need, Nothing You Don’t</h2>
+            <p className="text-gray-600 mt-4 text-lg">From private calls to screenshot blocking — MESEZ.ME is built with your privacy in mind.</p>
           </div>
-        </div>
-      </div>
-
-      <div className="container mx-auto p-6">
-        <div className="grid gap-6 md:grid-cols-2">
-          {features.map((feature, index) => (
-            <Feature key={index} title={feature.title} image={feature.image} description={feature.description} />
-          ))}
-        </div>
-      </div>
-
-      <div className="container mx-auto p-6">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 max-w-7xl mx-auto">
-          <div className="w-full lg:w-1/2">
-            <img width={500} height={500} className="w-full h-auto rounded-lg shadow-lg" src="/images/tracker.png" alt="No trackers" loading="lazy" />
+          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+            {features.map((feature, i) => (
+              <Feature key={i} title={feature.title} image={feature.image} description={feature.description} />
+            ))}
           </div>
-          <div className="w-full lg:w-1/2 space-y-6">
-            <div className="space-y-6">
-              <h2 className="text-4xl font-bold leading-tight">No trackers. No Personal Information.</h2>
-              <p className="text-gray-600">Your privacy matters to us. This app does not track any of your activities or collect personal data. We believe in providing a secure and private experience without compromising your freedom. Rest assured, your information stays with you—completely private and secure.</p>
-            </div>
+        </section>
+
+        <section id="philosophy" className="bg-gray-100 py-24 px-6">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <img src="/images/tracker.png" alt="No tracking" className="rounded-xl shadow-xl" />
             <div>
-              <Link className="btn btn-warning px-6 text-lg" to={"https://play.google.com/store/apps/details?id=in.messant&hl=en_IN"}>
-                Download
-              </Link>
+              <h2 className="text-3xl font-bold mb-4">Privacy Is Not a Feature — It’s the Foundation</h2>
+              <p className="text-gray-700 text-lg">At MESEZ.ME, we believe in digital dignity. We do not track you. We don’t sell your data. We exist to protect your conversations and freedom online.</p>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
 
-      <div className="container mx-auto p-6">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 max-w-7xl mx-auto">
-          <div className="w-full lg:w-1/2 space-y-6 order-2 md:order-none">
-            <div className="space-y-6">
-              <h2 className="text-4xl font-bold leading-tight">Free for Everyone</h2>
-              <p className="text-gray-600">Messant is proud to remain independent and free from ties to any major tech companies. Our mission is to stay focused on the community, not on corporate interests. We are committed to never being acquired, ensuring our users always come first. Our development is supported by generous grants and donations from people like you, alongside our dedicated sponsors. This allows us to continue improving and providing the best possible experience, free from external pressures.</p>
-            </div>
+        <section id="about" className="bg-white py-24 px-6 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4">About MESEZ.ME</h2>
+            <p className="text-gray-700 text-lg">Crafted in India by a team passionate about digital freedom and secure communication. We are proudly independent, privacy-obsessed, and community-driven.</p>
           </div>
+        </section>
 
-          <div className="w-full lg:w-1/2 order-1 md:order-none">
-            <img width={500} height={500} className="w-full h-auto rounded-lg shadow-lg" src="/images/earth.png" alt="Free for Everyone" loading="lazy" />
+        <section id="blog" className="bg-gray-50 py-24 px-6 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4">News & Updates</h2>
+            <p className="text-gray-700 text-lg">Insights, announcements, and resources on privacy, security, and the future of communication. Coming soon.</p>
           </div>
-        </div>
-      </div>
+        </section>
+
+        <section id="download" className="bg-gradient-to-tr from-indigo-700 to-blue-700 py-24 text-white px-6 text-center">
+          <h2 className="text-4xl font-bold mb-4">Join the Movement</h2>
+          <p className="text-lg text-gray-200 mb-8 max-w-2xl mx-auto">Now available on the Play Store. Start your journey with MESEZ.ME and take control of your privacy.</p>
+          <a href="https://play.google.com/store/apps/details?id=in.messant&hl=en_IN" className="inline-block px-8 py-3 bg-white text-blue-700 font-semibold rounded-full shadow hover:bg-gray-100 transition">Download on Play Store</a>
+        </section>
+      </main>
     </>
   );
 }
